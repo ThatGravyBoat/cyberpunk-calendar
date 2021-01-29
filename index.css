@@ -1,3 +1,9 @@
+:root {
+    --border: #e8615a;
+    --today-border: #2be4ea;
+    --today-bg: #295459;
+}
+
 body {
     margin: 0;
     background-color: #1e181e;
@@ -17,17 +23,17 @@ body {
     width: 50px;
     height: 50px;
     flex: 0 0 auto;
-    border: 2px solid #e8615a;
-    box-shadow: 0 0 5px #e8615a;
+    border: 2px solid var(--border);
+    box-shadow: 0 0 5px var(--border);
 }
 
-.today {
+#today {
     width: 50px;
     height: 50px;
     flex: 0 0 auto;
-    border: 2px solid #2be4ea;
-    box-shadow: 0 0 5px #2be4ea;
-    background-color: #295459;
+    border: 2px solid var(--today-border);
+    box-shadow: 0 0 5px var(--today-border);
+    background-color: var(--today-bg);
 }
 
 .dateNum {
@@ -52,8 +58,8 @@ body {
     width: 398px;
     height: 50px;
     flex: 0 0 auto;
-    border: 2px solid #e8615a;
-    box-shadow: 0 0 5px #e8615a;
+    border: 2px solid var(--border);
+    box-shadow: 0 0 8px var(--border);
 }
 
 .month {
@@ -62,6 +68,6 @@ body {
 
 .time {
     bottom: 0;
-    font-size: 20px;
+    font-size: 25px;
     
 }
