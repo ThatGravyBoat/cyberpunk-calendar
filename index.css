@@ -71,3 +71,12 @@ body {
     font-size: 25px;
     
 }
+
+.event {
+    margin-top: 50px;
+    width: 398px;
+    min-height: 50px;
+    flex: 0 0 auto;
+    border: 2px solid var(--border);
+    box-shadow: 0 0 8px var(--border);
+}

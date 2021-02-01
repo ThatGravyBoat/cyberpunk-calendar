@@ -10,7 +10,7 @@ function loadFunction() {
     repeatEvery(setTime, 1000);
 }
 
-function setCurrentDayAndMonth() {
+function setCurrentMonth() {
     document.getElementById("month").innerText = `${monthNames[currentMonth]}`
 }
 
@@ -42,6 +42,7 @@ function setTime() {
         currentMonth = date.getMonth()
         genCalendarDays();
         removeAndSetToday()
+        setCurrentMonth()
     }else if (currentDay < date.getDate()){
         currentDay = date.getDate()
         removeAndSetToday()
