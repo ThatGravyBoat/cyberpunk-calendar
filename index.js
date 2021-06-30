@@ -18,13 +18,14 @@ function getDaysInMonth(month,year) { return new Date(year, month, 0).getDate() 
 
 function genCalendarDays() {
     var date = new Date();
-    var monthDays = getDaysInMonth(date.getFullYear(), date.getMonth());
+    var monthDays = getDaysInMonth(date.getMonth() + 1, date.getFullYear());
     for (let i = 1; i <= monthDays; i++) {
         var day = new Date(date.getFullYear(), date.getMonth(), i);
         var calendar = document.getElementById("calendar");
         var node = document.createElement("div");
+        node.dataset.dateid = `${date.getMonth()}-${i}`
         node.className="date";
-        node.innerHTML = `<p class="dateNum">${i}</p><span class="day">${daysOfTheWeek[day.getDay()]}</span>`
+        node.innerHTML = `<p id="dateNumber" class="dateNum">${i}</p><span id="day" class="day">${daysOfTheWeek[day.getDay()]}</span>`
         calendar.appendChild(node)
     }
     removeAndSetToday()
