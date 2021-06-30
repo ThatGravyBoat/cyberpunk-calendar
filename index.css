@@ -2,13 +2,23 @@
     --border: #e8615a;
     --today-border: #2be4ea;
     --today-bg: #295459;
+    --hover-bg: #391419;
 }
 
 body {
+    width: 40%;
     margin: 0;
     background-color: #1e181e;
     font-family: "VT323", monospace;
     padding: 30px;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-gap: 8px;
+    color: white;
+}
+
+body > div {
+    flex: 0 0 auto;
 }
 
 .container {
@@ -27,6 +37,11 @@ body {
     box-shadow: 0 0 5px var(--border);
 }
 
+.date:hover {
+    cursor: pointer;
+    background-color: var(--hover-bg);
+}
+
 #today {
     width: 50px;
     height: 50px;
@@ -34,6 +49,12 @@ body {
     border: 2px solid var(--today-border);
     box-shadow: 0 0 5px var(--today-border);
     background-color: var(--today-bg);
+}
+
+.note-selected {
+    flex: 0 0 auto;
+    border: 2px solid #fed33f !important;
+    box-shadow: 0 0 5px #fed33f !important;
 }
 
 .dateNum {
@@ -72,11 +93,6 @@ body {
     
 }
 
-.event {
-    margin-top: 50px;
-    width: 398px;
-    min-height: 50px;
-    flex: 0 0 auto;
-    border: 2px solid var(--border);
-    box-shadow: 0 0 8px var(--border);
+.disabled {
+    display: none;
 }
